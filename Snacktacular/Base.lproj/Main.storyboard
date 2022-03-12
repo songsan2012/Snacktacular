@@ -289,6 +289,11 @@
                                 <action selector="cancelButtonPressed:" destination="zVo-0b-KLH" id="Zfc-Xv-uNU"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nLG-VC-919">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="zVo-0b-KLH" id="lBb-lv-AOE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
