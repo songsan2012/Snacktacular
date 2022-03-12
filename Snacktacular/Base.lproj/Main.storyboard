@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Snacktacular" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -156,25 +156,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zuk-dB-CPK">
                                 <rect key="frame" x="0.0" y="88" width="414" height="380"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4Y-ky-31k">
-                                        <rect key="frame" x="8" y="8" width="398" height="33"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="y69-Bk-KMF"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCd-3n-SON">
-                                        <rect key="frame" x="8" y="43" width="398" height="17"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="17" id="uOQ-4R-hd7"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zjo-Ia-VfU">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zjo-Ia-VfU">
                                         <rect key="frame" x="0.0" y="302" width="414" height="100"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -197,19 +179,34 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxv-Cv-jv1">
+                                        <rect key="frame" x="8" y="8" width="398" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="RmD-aI-gQ2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOg-q5-cYD">
+                                        <rect key="frame" x="8" y="43" width="398" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="PxA-hH-ViA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Zjo-Ia-VfU" secondAttribute="trailing" id="6lc-ZH-csP"/>
-                                    <constraint firstItem="QCd-3n-SON" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" constant="8" id="Dfh-I9-KlL"/>
                                     <constraint firstItem="Zjo-Ia-VfU" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" id="H6f-RF-6td"/>
-                                    <constraint firstAttribute="trailing" secondItem="o4Y-ky-31k" secondAttribute="trailing" constant="8" id="HKI-b1-iOu"/>
-                                    <constraint firstItem="Zjo-Ia-VfU" firstAttribute="top" secondItem="QCd-3n-SON" secondAttribute="bottom" constant="242" id="Idk-1U-grm"/>
+                                    <constraint firstAttribute="trailing" secondItem="fxv-Cv-jv1" secondAttribute="trailing" constant="8" id="HsZ-or-w0K"/>
                                     <constraint firstAttribute="height" constant="380" id="NwP-tI-cGG"/>
-                                    <constraint firstItem="QCd-3n-SON" firstAttribute="top" secondItem="o4Y-ky-31k" secondAttribute="bottom" constant="2" id="Rqm-n5-Yls"/>
-                                    <constraint firstAttribute="trailing" secondItem="QCd-3n-SON" secondAttribute="trailing" constant="8" id="Uez-PM-r9k"/>
-                                    <constraint firstItem="o4Y-ky-31k" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" constant="8" id="fHd-dS-Zfb"/>
-                                    <constraint firstItem="o4Y-ky-31k" firstAttribute="top" secondItem="Zuk-dB-CPK" secondAttribute="top" constant="8" id="z8w-Hh-rHE"/>
+                                    <constraint firstAttribute="trailing" secondItem="lOg-q5-cYD" secondAttribute="trailing" constant="8" id="Qh8-fO-laM"/>
+                                    <constraint firstItem="fxv-Cv-jv1" firstAttribute="top" secondItem="Zuk-dB-CPK" secondAttribute="top" constant="8" id="Rrm-br-ple"/>
+                                    <constraint firstItem="lOg-q5-cYD" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" constant="8" id="Y0q-9g-d55"/>
+                                    <constraint firstItem="lOg-q5-cYD" firstAttribute="top" secondItem="fxv-Cv-jv1" secondAttribute="bottom" constant="2" id="lWh-gk-S8w"/>
+                                    <constraint firstItem="fxv-Cv-jv1" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" constant="8" id="zdC-3S-rCY"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9D-hP-gBJ">
@@ -221,8 +218,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_._" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7o-vn-Vf4">
-                                <rect key="frame" x="68" y="474" width="45" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="_._" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7o-vn-Vf4">
+                                <rect key="frame" x="69" y="470" width="45" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="C5Z-zU-Clt"/>
                                     <constraint firstAttribute="height" constant="18" id="j9K-fw-Gka"/>
@@ -297,21 +294,21 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addressTextField" destination="QCd-3n-SON" id="dt4-Q7-Cge"/>
-                        <outlet property="nameTextField" destination="o4Y-ky-31k" id="KMW-cZ-ZdZ"/>
+                        <outlet property="addressTextField" destination="lOg-q5-cYD" id="ZoW-MZ-9NB"/>
+                        <outlet property="nameTextField" destination="fxv-Cv-jv1" id="zQH-2t-COm"/>
                         <outlet property="ratingLabel" destination="w7o-vn-Vf4" id="JWo-Qb-coy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lt-bo-X1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3661.875" y="84.507042253521121"/>
+            <point key="canvasLocation" x="3660.8695652173915" y="84.375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0AF-Ze-2N5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="XkS-sy-w44" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" toolbarHidden="NO" id="XkS-sy-w44" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="doX-ku-SXs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -324,10 +321,11 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qc5-Gs-3wE">
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="qc5-Gs-3wE">
                         <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <color key="barTintColor" name="PrimaryColor"/>
                     </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B9I-kH-JZ7"/>

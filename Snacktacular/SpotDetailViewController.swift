@@ -9,8 +9,11 @@ import UIKit
 
 class SpotDetailViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UILabel!
-    @IBOutlet weak var addressTextField: UILabel!
+//    @IBOutlet weak var nameTextField: UILabel!
+//    @IBOutlet weak var addressTextField: UILabel!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var ratingLabel: UILabel!
     
     var spot: Spot!
