@@ -7,6 +7,7 @@
 
 import UIKit
 import GooglePlaces
+import MapKit
 
 class SpotDetailViewController: UIViewController {
 
@@ -16,6 +17,9 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var ratingLabel: UILabel!
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
     
     var spot: Spot!
     

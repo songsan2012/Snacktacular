@@ -195,17 +195,24 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HyO-in-2wS">
+                                        <rect key="frame" x="0.0" y="68" width="414" height="128"/>
+                                    </mapView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HyO-in-2wS" secondAttribute="trailing" id="4CY-Iz-cmp"/>
                                     <constraint firstAttribute="trailing" secondItem="Zjo-Ia-VfU" secondAttribute="trailing" id="6lc-ZH-csP"/>
                                     <constraint firstItem="Zjo-Ia-VfU" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" id="H6f-RF-6td"/>
+                                    <constraint firstItem="HyO-in-2wS" firstAttribute="top" secondItem="lOg-q5-cYD" secondAttribute="bottom" constant="2" id="HNk-Kk-ZMV"/>
                                     <constraint firstAttribute="trailing" secondItem="fxv-Cv-jv1" secondAttribute="trailing" constant="8" id="HsZ-or-w0K"/>
                                     <constraint firstAttribute="height" constant="380" id="NwP-tI-cGG"/>
                                     <constraint firstAttribute="trailing" secondItem="lOg-q5-cYD" secondAttribute="trailing" constant="8" id="Qh8-fO-laM"/>
                                     <constraint firstItem="fxv-Cv-jv1" firstAttribute="top" secondItem="Zuk-dB-CPK" secondAttribute="top" constant="8" id="Rrm-br-ple"/>
                                     <constraint firstItem="lOg-q5-cYD" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" constant="8" id="Y0q-9g-d55"/>
+                                    <constraint firstItem="Zjo-Ia-VfU" firstAttribute="top" secondItem="HyO-in-2wS" secondAttribute="bottom" id="feQ-Pg-BDD"/>
                                     <constraint firstItem="lOg-q5-cYD" firstAttribute="top" secondItem="fxv-Cv-jv1" secondAttribute="bottom" constant="2" id="lWh-gk-S8w"/>
+                                    <constraint firstItem="HyO-in-2wS" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" id="wJB-w0-BDM"/>
                                     <constraint firstItem="fxv-Cv-jv1" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" constant="8" id="zdC-3S-rCY"/>
                                 </constraints>
                             </view>
@@ -299,6 +306,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="lOg-q5-cYD" id="ZoW-MZ-9NB"/>
+                        <outlet property="mapView" destination="HyO-in-2wS" id="tGe-wf-cdl"/>
                         <outlet property="nameTextField" destination="fxv-Cv-jv1" id="zQH-2t-COm"/>
                         <outlet property="ratingLabel" destination="w7o-vn-Vf4" id="JWo-Qb-coy"/>
                     </connections>
