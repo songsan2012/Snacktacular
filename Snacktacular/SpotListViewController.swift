@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class SpotListViewController: UIViewController {
 
@@ -15,7 +16,8 @@ class SpotListViewController: UIViewController {
     
 //    var spots = ["Island Creek Oysters", "El Pelon", "Shake Shack", "Pino's Pizza"]
     var spots: Spots!
-    
+    var locationManager: CLLocationManager!
+    var currentLocation: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +28,15 @@ class SpotListViewController: UIViewController {
         configureSegmentedControl()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         spots.loadData {
+            self.sortBasedOnSegmentPressed()
             self.tableView.reloadData()
         }
     }
+    
 
     func configureSegmentedControl() {
         // set font colors for segmented control
@@ -56,6 +61,27 @@ class SpotListViewController: UIViewController {
             destination.spot = spots.spotArray[selectedIndexPath.row]
         }
     }
+    
+    func sortBasedOnSegmentPressed() {
+        switch sortSegmentedControl.selectedSegmentIndex {
+        case 0:  // A-Z
+            spots.spotArray.sort(by: {$0.name < $1.name})
+        case 1: // closest
+            print("TODO: closest in Switch")
+        case 2: // averageRating
+            print("TODO: averageRating in Switch")
+        default:
+            print("HEY! You shouldn't have gotten here to the default switch statement. Check out the segmented control for an error!")
+        }
+        tableView.reloadData()
+        
+    }
+    
+    @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
+        sortBasedOnSegmentPressed()
+        
+    }
+    
     
 }
 
