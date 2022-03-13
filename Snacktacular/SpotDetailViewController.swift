@@ -10,10 +10,8 @@ import GooglePlaces
 import MapKit
 import Contacts
 
-class SpotDetailViewController: UIViewController {
 
-//    @IBOutlet weak var nameTextField: UILabel!
-//    @IBOutlet weak var addressTextField: UILabel!
+class SpotDetailViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
