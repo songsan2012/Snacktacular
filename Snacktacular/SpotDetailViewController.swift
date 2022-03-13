@@ -68,6 +68,9 @@ class SpotDetailViewController: UIViewController {
         }
     }
     
+    func emptyTestFunc() {
+        
+    }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         updateFromInterface()
