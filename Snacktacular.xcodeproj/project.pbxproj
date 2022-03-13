@@ -87,6 +87,7 @@
 		E44AD29527DB911D00267197 /* Snacktacular */ = {
 			isa = PBXGroup;
 			children = (
+				E41F023527DD533B00858BFB /* APIKeys.swift */,
 				E44AD29627DB911D00267197 /* AppDelegate.swift */,
 				E44AD29827DB911D00267197 /* SceneDelegate.swift */,
 				E41F022F27DCF17D00858BFB /* Spot.swift */,
@@ -96,7 +97,6 @@
 				E46C311227DC2103006C73CE /* SpotTableViewCell.swift */,
 				E46C311427DC2760006C73CE /* SpotDetailViewController.swift */,
 				E41F023127DD0A3500858BFB /* UIViewController+alert.swift */,
-				E41F023527DD533B00858BFB /* APIKeys.swift */,
 				E44AD29C27DB911D00267197 /* Main.storyboard */,
 				E44AD29F27DB911E00267197 /* Assets.xcassets */,
 				E44AD2A127DB911E00267197 /* LaunchScreen.storyboard */,
