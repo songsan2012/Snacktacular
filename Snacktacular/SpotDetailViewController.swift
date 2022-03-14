@@ -15,18 +15,22 @@ class SpotDetailViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
-//    @IBOutlet weak var ratingLabel: UILabel!
-
+    @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var tableView: UITableView!
     
     var spot: Spot!
     let regionDistance: CLLocationDegrees = 750.0
     var locationManager: CLLocationManager!
+    var reviews: [String] = ["Tasty", "Aweful", "Tasty", "Aweful", "Tasty", "Aweful", "Tasty", "Aweful", "Tasty", "Aweful", "Tasty", "Aweful", "Tasty", "Aweful"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         // Do any additional setup after loading the view.
         getLocation()
         if spot == nil {
@@ -228,3 +232,18 @@ extension SpotDetailViewController: CLLocationManagerDelegate {
     
 }
 
+
+extension SpotDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return reviews.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath)
+        return cell
+    }
+    
+    
+}
