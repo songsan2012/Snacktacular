@@ -8,6 +8,13 @@
 import UIKit
 import Firebase
 
+private let dateFormatter: DateFormatter = {
+   let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .medium
+    dateFormatter.timeStyle = .none
+    return dateFormatter
+}()
+
 class ReviewTableViewController: UITableViewController {
 
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
@@ -44,6 +51,11 @@ class ReviewTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // hide keyboard if we tap outside of a field
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+        
         guard spot != nil else {
             print("ERROR: No spot passed to ReviewTableViewController.swift")
             return
@@ -61,6 +73,7 @@ class ReviewTableViewController: UITableViewController {
         reviewTextView.text = review.text
         
         rating = review.rating  // will update rating stars on load
+        reviewDateLabel.text = "posted: \(dateFormatter.string(from: review.date))"
         
         if review.documentID == "" { // This is a new review
             addBordersToEditableObjects()
@@ -73,12 +86,13 @@ class ReviewTableViewController: UITableViewController {
             } else { // Review posted by different user
                 saveBarButton.hide()
                 cancelBarButton.hide()
-                // We will eventually change the uid to email
-                postedByLabel.text = "Posted by: \(review.reviewUserID)"
+            
+                postedByLabel.text = "Posted by: \(review.reviewUserEmail)"
                 
                 for starButton in starButtonCollection {
                     starButton.backgroundColor = .white
                     starButton.isEnabled = false
+                    
                 }
                 reviewTitleField.isEnabled = false
                 reviewTitleField.borderStyle = .none
@@ -112,12 +126,28 @@ class ReviewTableViewController: UITableViewController {
     
 
     @IBAction func reviewTitleChange(_ sender: UITextField) {
+        // prevent a title of blank spaces from being saved, too
+        let noSpaces = reviewTitleField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if noSpaces != "" {
+            saveBarButton.isEnabled = true
+        } else {
+            saveBarButton.isEnabled = false
+        }
     }
     
     @IBAction func reviewTitleDonePressed(_ sender: UITextField) {
     }
     
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
+            review.deleteData(spot: spot) { (success) in
+                if success {
+                    self.leaveViewController()
+                }
+                else {
+                    print("😡 Delete unsuccessful")
+                }
+        }
     }
     
     

@@ -170,14 +170,19 @@
                                         </mapView>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxv-Cv-jv1">
                                             <rect key="frame" x="8" y="8" width="374" height="33"/>
+                                            <color key="backgroundColor" name="UI Element Background"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="33" id="RmD-aI-gQ2"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="nameFieldChanged:" destination="zVo-0b-KLH" eventType="editingChanged" id="VDe-8o-mLP"/>
+                                            </connections>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOg-q5-cYD">
                                             <rect key="frame" x="8" y="43" width="374" height="17"/>
+                                            <color key="backgroundColor" name="UI Element Background"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="PxA-hH-ViA"/>
                                             </constraints>
@@ -367,13 +372,13 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="gwi-Vh-yOJ">
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="gwi-Vh-yOJ">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="aiN-Kd-htM">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="zVo-0b-KLH" id="Zfc-Xv-uNU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="nLG-VC-919">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="nLG-VC-919">
                             <connections>
                                 <action selector="saveButtonPressed:" destination="zVo-0b-KLH" id="lBb-lv-AOE"/>
                             </connections>
@@ -382,9 +387,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="lOg-q5-cYD" id="ZoW-MZ-9NB"/>
+                        <outlet property="cancelBarButton" destination="aiN-Kd-htM" id="akT-vP-mag"/>
                         <outlet property="mapView" destination="knx-XR-Gt0" id="PZi-Cm-N2m"/>
                         <outlet property="nameTextField" destination="fxv-Cv-jv1" id="zQH-2t-COm"/>
                         <outlet property="ratingLabel" destination="Hat-eq-PfR" id="3MJ-P6-gJ4"/>
+                        <outlet property="saveBarButton" destination="nLG-VC-919" id="sHf-0e-jM8"/>
                         <outlet property="tableView" destination="gUb-tJ-h34" id="MWp-Rh-GmV"/>
                         <segue destination="T9s-n3-O7k" kind="presentation" identifier="AddReview" modalPresentationStyle="fullScreen" id="xhq-Hm-4yc"/>
                     </connections>
@@ -525,7 +532,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkL-IJ-6r1">
-                                                            <rect key="frame" x="132" y="0.0" width="32" height="40"/>
+                                                            <rect key="frame" x="132" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UI Element Background"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="6dF-W7-On8"/>
@@ -541,7 +548,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAA-AT-Uhe">
-                                                            <rect key="frame" x="168" y="0.0" width="40" height="40"/>
+                                                            <rect key="frame" x="176" y="0.0" width="32" height="40"/>
                                                             <color key="backgroundColor" name="UI Element Background"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="K6w-g0-ijl"/>
