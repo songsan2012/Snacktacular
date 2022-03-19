@@ -23,6 +23,8 @@
 		E46C311327DC2103006C73CE /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C311227DC2103006C73CE /* SpotTableViewCell.swift */; };
 		E46C311527DC2760006C73CE /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C311427DC2760006C73CE /* SpotDetailViewController.swift */; };
 		E476A4D027DF13ED002EFDDE /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4CF27DF13ED002EFDDE /* ReviewTableViewController.swift */; };
+		E476A4D227E4BED1002EFDDE /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4D127E4BED1002EFDDE /* Review.swift */; };
+		E476A4D427E4FA31002EFDDE /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4D327E4FA31002EFDDE /* Reviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		E46C311227DC2103006C73CE /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		E46C311427DC2760006C73CE /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
 		E476A4CF27DF13ED002EFDDE /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		E476A4D127E4BED1002EFDDE /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		E476A4D327E4FA31002EFDDE /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				E44AD29827DB911D00267197 /* SceneDelegate.swift */,
 				E41F022F27DCF17D00858BFB /* Spot.swift */,
 				E41F023327DD3F1300858BFB /* Spots.swift */,
+				E476A4D127E4BED1002EFDDE /* Review.swift */,
+				E476A4D327E4FA31002EFDDE /* Reviews.swift */,
 				E44AD29A27DB911D00267197 /* LoginViewController.swift */,
 				E46C311027DC1ADD006C73CE /* SpotListViewController.swift */,
 				E46C311227DC2103006C73CE /* SpotTableViewCell.swift */,
@@ -252,11 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E476A4D427E4FA31002EFDDE /* Reviews.swift in Sources */,
 				E46C311127DC1ADD006C73CE /* SpotListViewController.swift in Sources */,
 				E44AD29B27DB911D00267197 /* LoginViewController.swift in Sources */,
 				E44AD29727DB911D00267197 /* AppDelegate.swift in Sources */,
 				E46C311527DC2760006C73CE /* SpotDetailViewController.swift in Sources */,
 				E476A4D027DF13ED002EFDDE /* ReviewTableViewController.swift in Sources */,
+				E476A4D227E4BED1002EFDDE /* Review.swift in Sources */,
 				E41F023427DD3F1300858BFB /* Spots.swift in Sources */,
 				E46C311327DC2103006C73CE /* SpotTableViewCell.swift in Sources */,
 				E41F023627DD533B00858BFB /* APIKeys.swift in Sources */,
