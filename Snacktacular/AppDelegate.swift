@@ -9,7 +9,8 @@ import UIKit
 import Firebase
 import GooglePlaces
 
-@main
+//@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
