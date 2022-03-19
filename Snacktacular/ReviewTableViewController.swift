@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ReviewTableViewController: UITableViewController {
 
@@ -60,6 +61,32 @@ class ReviewTableViewController: UITableViewController {
         reviewTextView.text = review.text
         
         rating = review.rating  // will update rating stars on load
+        
+        if review.documentID == "" { // This is a new review
+            addBordersToEditableObjects()
+        } else {
+            if review.reviewUserID == Auth.auth().currentUser?.uid { // Review posted by current user
+                self.navigationItem.leftItemsSupplementBackButton = false
+                saveBarButton.title = "Update"
+                addBordersToEditableObjects()
+                deleteButton.isHidden = false
+            } else { // Review posted by different user
+                saveBarButton.hide()
+                cancelBarButton.hide()
+                // We will eventually change the uid to email
+                postedByLabel.text = "Posted by: \(review.reviewUserID)"
+                
+                for starButton in starButtonCollection {
+                    starButton.backgroundColor = .white
+                    starButton.isEnabled = false
+                }
+                reviewTitleField.isEnabled = false
+                reviewTitleField.borderStyle = .none
+                reviewTextView.isEditable = false
+                reviewTitleField.backgroundColor = .white
+                reviewTextView.backgroundColor = .white
+            }
+        }
     }
     
     func updateFromUserInterface() {
@@ -68,6 +95,11 @@ class ReviewTableViewController: UITableViewController {
         
     }
     
+    func addBordersToEditableObjects() {
+        reviewTitleField.addBorder(width: 0.5, radius: 5.0, color: .black)
+        reviewTextView.addBorder(width: 0.5, radius: 5.0, color: .black)
+        buttonsBackgroundView.addBorder(width: 0.5, radius: 5.0, color: .black)
+    }
     
     func leaveViewController() {
         let isPresentingInAddMode = presentingViewController is UINavigationController
