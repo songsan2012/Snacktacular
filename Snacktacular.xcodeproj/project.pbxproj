@@ -28,6 +28,7 @@
 		E476A4D627E5660F002EFDDE /* SpotReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4D527E5660F002EFDDE /* SpotReviewTableViewCell.swift */; };
 		E476A4D827E5AD49002EFDDE /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4D727E5AD49002EFDDE /* UIView+addBorder.swift */; };
 		E476A4DA27E5AE29002EFDDE /* UIBarButtonItem+hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4D927E5AE29002EFDDE /* UIBarButtonItem+hide.swift */; };
+		E476A4DC27E625BE002EFDDE /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4DB27E625BD002EFDDE /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		E476A4D527E5660F002EFDDE /* SpotReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotReviewTableViewCell.swift; sourceTree = "<group>"; };
 		E476A4D727E5AD49002EFDDE /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
 		E476A4D927E5AE29002EFDDE /* UIBarButtonItem+hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+hide.swift"; sourceTree = "<group>"; };
+		E476A4DB27E625BD002EFDDE /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				E46C311427DC2760006C73CE /* SpotDetailViewController.swift */,
 				E476A4D527E5660F002EFDDE /* SpotReviewTableViewCell.swift */,
 				E476A4CF27DF13ED002EFDDE /* ReviewTableViewController.swift */,
+				E476A4DB27E625BD002EFDDE /* PhotoViewController.swift */,
 				E41F023127DD0A3500858BFB /* UIViewController+alert.swift */,
 				E476A4D727E5AD49002EFDDE /* UIView+addBorder.swift */,
 				E476A4D927E5AE29002EFDDE /* UIBarButtonItem+hide.swift */,
@@ -277,6 +280,7 @@
 				E41F023427DD3F1300858BFB /* Spots.swift in Sources */,
 				E476A4DA27E5AE29002EFDDE /* UIBarButtonItem+hide.swift in Sources */,
 				E46C311327DC2103006C73CE /* SpotTableViewCell.swift in Sources */,
+				E476A4DC27E625BE002EFDDE /* PhotoViewController.swift in Sources */,
 				E476A4D627E5660F002EFDDE /* SpotReviewTableViewCell.swift in Sources */,
 				E41F023627DD533B00858BFB /* APIKeys.swift in Sources */,
 				E41F023027DCF17D00858BFB /* Spot.swift in Sources */,
