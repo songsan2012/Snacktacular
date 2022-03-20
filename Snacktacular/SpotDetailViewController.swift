@@ -20,15 +20,16 @@ class SpotDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     
     
     var spot: Spot!
+    var photo: Photo!
     let regionDistance: CLLocationDegrees = 750.0
     var locationManager: CLLocationManager!
     var reviews: Reviews!
+    var imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,7 @@ class SpotDetailViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        imagePickerController.delegate = self
         
         // Do any additional setup after loading the view.
         getLocation()
@@ -58,6 +60,11 @@ class SpotDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if spot.documentID != "" {
+            self.navigationController?.setToolbarHidden(true, animated: true)
+        }
+        
         reviews.loadData(spot: spot) {
             self.tableView.reloadData()
         }
@@ -109,6 +116,7 @@ class SpotDetailViewController: UIViewController {
             let navigationController = segue.destination as! UINavigationController
             let destination = navigationController.viewControllers.first as! PhotoViewController
             destination.spot = spot
+            destination.photo = photo
         case "ShowPhoto":
             let destination = segue.destination as! PhotoViewController
             // TODO: FIX THIS LATER
@@ -141,7 +149,12 @@ class SpotDetailViewController: UIViewController {
                 self.cancelBarButton.hide()
                 self.navigationController?.setToolbarHidden(true, animated: true)
                 self.disableTextEditing()
-                self.performSegue(withIdentifier: segueIdentifier, sender: nil)
+//                if segue.identifier == "AddReview" {
+                if segueIdentifier == "AddReview" {
+                    self.performSegue(withIdentifier: segueIdentifier, sender: nil)
+                } else {
+                    self.cameraOrLibraryAlert()
+                }
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -196,10 +209,47 @@ class SpotDetailViewController: UIViewController {
         if spot.documentID == "" {
             saveCancelAlert(title: "This Venue Has Not Been Saved", message: "You must save this venue before you can review it.", segueIdentifier: "AddPhoto")
         } else {
-            performSegue(withIdentifier: "AddPhoto", sender: nil)
+//            performSegue(withIdentifier: "AddPhoto", sender: nil)
+            cameraOrLibraryAlert()
         }
     }
     
+    func cameraOrLibraryAlert() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: {
+            
+            (_) in
+            
+            // TODO: Addin the Photo Library code later
+            self.accessPhotoLibrary()
+            
+            
+            print("You clicked Photo Library")
+            }
+        )
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: {
+            
+            (_) in
+            
+            // TODO: Add in the Camera code later
+            self.accessCamera()
+            
+            print("You clicked Camera")
+            }
+        )
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        
+        alertController.addAction(photoLibraryAction)
+        alertController.addAction(cameraAction)
+        alertController.addAction(cancelAction)
+        
+        
+        present(alertController, animated: true, completion: nil)
+    }
     
     
     @IBAction func locationButtonPressed(_ sender: UIBarButtonItem) {
@@ -356,3 +406,50 @@ extension SpotDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     
 }
+
+
+// Add the Camera support Extensions
+extension SpotDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        photo = Photo()
+        
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            photo.image = editedImage
+        }
+        else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photo.image = originalImage
+        }
+        
+        dismiss(animated: true) {
+            self.performSegue(withIdentifier: "AddPhoto", sender: nil)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func accessPhotoLibrary()
+    {
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
+        
+    }
+    
+    func accessCamera() {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePickerController.sourceType = .camera
+            present(imagePickerController, animated: true, completion: nil)
+        }
+        else {
+            self.oneButtonAlert(title: "Camera Not Available", message: "There is no camera found")
+        
+        }
+
+    }
+    
+}
+
