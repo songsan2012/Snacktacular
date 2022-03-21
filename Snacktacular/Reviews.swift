@@ -33,8 +33,6 @@ class Reviews {
             for document in querySnapshot!.documents {
                 // You'll have to make sure you have a dictionary initializer in the singular class
                 let review = Review(dictionary: document.data())
-                
-//                spot.documentID = document.documentID
                 review.documentID = document.documentID
                 self.reviewArray.append(review)
                 

@@ -17,7 +17,8 @@ class SpotTableViewCell: UITableViewCell {
     var spot: Spot! {
         didSet {
             nameLabel.text = spot.name
-            ratingLabel.text = "Avg. Rating: \(spot.averageRating)"
+            let roundedAverage = ((spot.averageRating * 10).rounded()) / 10
+            ratingLabel.text = "Avg. Rating: \(roundedAverage)"
             
             guard let currentLocation = currentLocation else {
                 distanceLabel.text = "Distance: -.-"
@@ -28,17 +29,4 @@ class SpotTableViewCell: UITableViewCell {
             distanceLabel.text = "Distance: \(distanceInMiles) miles"
         }
     }
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

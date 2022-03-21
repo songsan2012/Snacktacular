@@ -12,11 +12,9 @@ extension UIView {
         self.layer.borderWidth = width
         self.layer.borderColor = color.cgColor
         self.layer.cornerRadius = radius
-        
     }
     
     func noBorder() {
         self.layer.borderWidth = 0.0
     }
-    
 }

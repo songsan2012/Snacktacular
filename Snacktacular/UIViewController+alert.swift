@@ -6,7 +6,6 @@
 //  Copyright © 2022 song. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIViewController {
@@ -14,7 +13,6 @@ extension UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
-        
         self.present(alertController, animated: true, completion: nil)
     }
 }
