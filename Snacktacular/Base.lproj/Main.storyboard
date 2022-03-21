@@ -191,7 +191,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fks-fW-Qjy">
-                                            <rect key="frame" x="186.33333333333334" y="346" width="97.333333333333343" height="32"/>
+                                            <rect key="frame" x="184.33333333333334" y="346" width="97.333333333333343" height="32"/>
                                             <color key="backgroundColor" name="PrimaryColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="32" id="fZ9-oM-eW1"/>
@@ -291,7 +291,6 @@
                                         <constraint firstAttribute="trailing" secondItem="jHp-29-FKt" secondAttribute="trailing" constant="4" id="WWv-n5-Gi5"/>
                                         <constraint firstItem="lOg-q5-cYD" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" constant="8" id="Y0q-9g-d55"/>
                                         <constraint firstItem="YSg-GJ-uAi" firstAttribute="top" secondItem="Zuk-dB-CPK" secondAttribute="top" constant="242" id="ZUt-f4-Oba"/>
-                                        <constraint firstItem="jHp-29-FKt" firstAttribute="leading" secondItem="fks-fW-Qjy" secondAttribute="trailing" constant="4" id="dwL-WV-HP5"/>
                                         <constraint firstItem="jHp-29-FKt" firstAttribute="top" secondItem="knx-XR-Gt0" secondAttribute="bottom" constant="40" id="eH8-Ys-2y6"/>
                                         <constraint firstItem="lOg-q5-cYD" firstAttribute="top" secondItem="fxv-Cv-jv1" secondAttribute="bottom" constant="2" id="lWh-gk-S8w"/>
                                         <constraint firstItem="fks-fW-Qjy" firstAttribute="top" secondItem="knx-XR-Gt0" secondAttribute="bottom" constant="40" id="n4T-fh-W0V"/>
@@ -299,7 +298,6 @@
                                         <constraint firstItem="knx-XR-Gt0" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" id="vBi-34-kqa"/>
                                         <constraint firstAttribute="trailing" secondItem="jHp-29-FKt" secondAttribute="trailing" constant="4" id="vss-LC-7xb"/>
                                         <constraint firstAttribute="trailing" secondItem="jHp-29-FKt" secondAttribute="trailing" constant="4" id="wJA-19-onz"/>
-                                        <constraint firstItem="jHp-29-FKt" firstAttribute="leading" secondItem="fks-fW-Qjy" secondAttribute="trailing" constant="4" id="xBv-fi-oSt"/>
                                         <constraint firstItem="fxv-Cv-jv1" firstAttribute="leading" secondItem="Zuk-dB-CPK" secondAttribute="leading" constant="8" id="zdC-3S-rCY"/>
                                     </constraints>
                                 </view>
@@ -583,7 +581,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkL-IJ-6r1">
-                                                            <rect key="frame" x="132" y="0.0" width="40" height="40"/>
+                                                            <rect key="frame" x="132" y="0.0" width="32" height="40"/>
                                                             <color key="backgroundColor" name="UI Element Background"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="6dF-W7-On8"/>
@@ -599,7 +597,7 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAA-AT-Uhe">
-                                                            <rect key="frame" x="176" y="0.0" width="32" height="40"/>
+                                                            <rect key="frame" x="168" y="0.0" width="40" height="40"/>
                                                             <color key="backgroundColor" name="UI Element Background"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="K6w-g0-ijl"/>
@@ -814,13 +812,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-pQ-mYr">
                                 <rect key="frame" x="8" y="96" width="374" height="15"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="by: Benedic Cumberbatch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kZ-kN-fPH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="by: Benedic Cumberbatch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kZ-kN-fPH">
                                         <rect key="frame" x="0.0" y="0.0" width="274" height="15"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="on: Dec. 32, 2100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYi-D1-It0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on: Dec. 32, 2100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYi-D1-It0">
                                         <rect key="frame" x="274" y="0.0" width="100" height="15"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                         <nil key="textColor"/>

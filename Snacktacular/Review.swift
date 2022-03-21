@@ -82,7 +82,12 @@ class Review {
                 }
                 self.documentID = ref!.documentID
                 print("💨 Added document: \(self.documentID) from Review to spot: \(spot.documentID)" )  // It worked!
-                completion(true)
+                
+                spot.updateAverageRating {
+                    completion(true)
+                }
+                
+                
             }
             
         }
@@ -94,7 +99,9 @@ class Review {
                     return completion(false)
                 }
                 print("💨 Updated document: \(self.documentID) from Review in spot: \(spot.documentID)")  // It worked!
-                completion(true)
+                spot.updateAverageRating {
+                    completion(true)
+                }
             }
             
         }
@@ -111,7 +118,9 @@ class Review {
             }
             else {
                 print("👍 Successfully deleted document \(self.documentID)")
-                completion(true)
+                spot.updateAverageRating {
+                    completion(true)
+                }
             }
         }
     }
