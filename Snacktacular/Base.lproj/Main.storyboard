@@ -247,14 +247,30 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="tAp-Qc-R7g">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="tAp-Qc-R7g" customClass="SpotPhotoCollectionViewCell" customModule="Snacktacular" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PaO-YR-KOM">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cKf-gk-wO2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="Ivz-8H-UR4"/>
+                                                                    <constraint firstAttribute="height" constant="100" id="NVn-kG-Qz2"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="cKf-gk-wO2" secondAttribute="bottom" id="2pQ-9u-i47"/>
+                                                            <constraint firstAttribute="trailing" secondItem="cKf-gk-wO2" secondAttribute="trailing" id="LVN-nn-2o2"/>
+                                                            <constraint firstItem="cKf-gk-wO2" firstAttribute="top" secondItem="PaO-YR-KOM" secondAttribute="top" id="jDi-Sn-1yU"/>
+                                                            <constraint firstItem="cKf-gk-wO2" firstAttribute="leading" secondItem="PaO-YR-KOM" secondAttribute="leading" id="pFa-aY-R5L"/>
+                                                        </constraints>
                                                     </collectionViewCellContentView>
                                                     <connections>
+                                                        <outlet property="photoImageVIew" destination="cKf-gk-wO2" id="9FO-Lb-FLO"/>
                                                         <segue destination="Wlc-RF-MqW" kind="show" identifier="ShowPhoto" id="3Hj-Ue-eBO"/>
                                                     </connections>
                                                 </collectionViewCell>
@@ -421,6 +437,7 @@
                     <connections>
                         <outlet property="addressTextField" destination="lOg-q5-cYD" id="ZoW-MZ-9NB"/>
                         <outlet property="cancelBarButton" destination="aiN-Kd-htM" id="akT-vP-mag"/>
+                        <outlet property="collectionView" destination="YSg-GJ-uAi" id="uPE-np-i4o"/>
                         <outlet property="mapView" destination="knx-XR-Gt0" id="PZi-Cm-N2m"/>
                         <outlet property="nameTextField" destination="fxv-Cv-jv1" id="zQH-2t-COm"/>
                         <outlet property="ratingLabel" destination="Hat-eq-PfR" id="3MJ-P6-gJ4"/>
@@ -825,7 +842,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Gk-uq-flk">
-                                <rect key="frame" x="0.0" y="155" width="390" height="647"/>
+                                <rect key="frame" x="0.0" y="155" width="390" height="598"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DwB-BV-HRt"/>
@@ -988,7 +1005,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="irm-YI-OoB"/>
+        <segue reference="3Hj-Ue-eBO"/>
         <segue reference="g73-EM-Zbz"/>
         <segue reference="2EH-fK-6S1"/>
     </inferredMetricsTieBreakers>
