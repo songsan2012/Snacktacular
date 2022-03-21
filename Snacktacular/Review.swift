@@ -9,7 +9,6 @@ import Foundation
 import Firebase
 import MapKit
 
-//class Review:  NSObject, MKAnnotation{
 class Review {
     var title: String
     var text: String

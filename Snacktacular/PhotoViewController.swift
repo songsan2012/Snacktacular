@@ -56,6 +56,7 @@ class PhotoViewController: UIViewController {
         descriptionTextView.text = photo.description
         //photoImageView.image = photo.image
         
+        
         if photo.documentID == "" { // This is a new photo
             addBordersToEditableObjects()
         } else {
