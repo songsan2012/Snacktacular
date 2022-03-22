@@ -84,6 +84,8 @@ class SpotListViewController: UIViewController {
         
     }
     
+    @IBAction func UserButtonPressed(_ sender: UIBarButtonItem) {
+    }
     
 }
 
