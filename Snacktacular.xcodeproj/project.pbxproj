@@ -32,6 +32,7 @@
 		E476A4DE27E7C758002EFDDE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4DD27E7C758002EFDDE /* Photo.swift */; };
 		E476A4E027E81EE9002EFDDE /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4DF27E81EE9002EFDDE /* Photos.swift */; };
 		E476A4E227E82599002EFDDE /* SpotPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4E127E82599002EFDDE /* SpotPhotoCollectionViewCell.swift */; };
+		E476A4E427E9070C002EFDDE /* SnackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E476A4E327E9070C002EFDDE /* SnackUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		E476A4DD27E7C758002EFDDE /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		E476A4DF27E81EE9002EFDDE /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		E476A4E127E82599002EFDDE /* SpotPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E476A4E327E9070C002EFDDE /* SnackUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				E476A4D327E4FA31002EFDDE /* Reviews.swift */,
 				E476A4DD27E7C758002EFDDE /* Photo.swift */,
 				E476A4DF27E81EE9002EFDDE /* Photos.swift */,
+				E476A4E327E9070C002EFDDE /* SnackUser.swift */,
 				E44AD29A27DB911D00267197 /* LoginViewController.swift */,
 				E46C311027DC1ADD006C73CE /* SpotListViewController.swift */,
 				E46C311227DC2103006C73CE /* SpotTableViewCell.swift */,
@@ -296,6 +299,7 @@
 				E41F023627DD533B00858BFB /* APIKeys.swift in Sources */,
 				E41F023027DCF17D00858BFB /* Spot.swift in Sources */,
 				E44AD29927DB911D00267197 /* SceneDelegate.swift in Sources */,
+				E476A4E427E9070C002EFDDE /* SnackUser.swift in Sources */,
 				E476A4E227E82599002EFDDE /* SpotPhotoCollectionViewCell.swift in Sources */,
 				E41F023227DD0A3500858BFB /* UIViewController+alert.swift in Sources */,
 				E476A4D827E5AD49002EFDDE /* UIView+addBorder.swift in Sources */,
